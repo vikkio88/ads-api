@@ -4,10 +4,6 @@
 namespace App\Libs\AdsLib;
 
 
-/**
- * Class Randomizer
- * @package App\Lib\DsManager\Helpers
- */
 class Randomizer
 {
     /**
