@@ -4,6 +4,7 @@
 namespace App\Libs\AdsLib;
 
 
+use App\Libs\AdsLib\SimulationModels\Match as MatchSim;
 use App\Models\LeagueRound;
 use App\Models\Match;
 use App\Models\MatchResult;
@@ -73,7 +74,7 @@ class MatchSimulator
      */
     private static function simulate($matchId)
     {
-        $match = \App\Lib\DsManager\Models\Match::fromArray(
+        $match = MatchSim::fromArray(
             Match::complete()
                 ->where(
                     [

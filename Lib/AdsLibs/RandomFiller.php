@@ -3,10 +3,11 @@
 
 namespace App\Libs\AdsLib;
 
-use App\Lib\DsManager\Models\Coach;
-use App\Lib\DsManager\Models\Player;
-use App\Lib\DsManager\Models\Team;
 use App\Lib\Helpers\Config;
+use App\Libs\AdsLib\SimulationModels\Coach;
+use App\Libs\AdsLib\SimulationModels\Player;
+use App\Libs\AdsLib\SimulationModels\Team;
+use Faker\Factory;
 
 /**
  * Class RandomFiller
@@ -32,7 +33,7 @@ class RandomFiller
     public function __construct($locale = "it_IT")
     {
         $this->locale = $locale;
-        $this->faker = \Faker\Factory::create($locale);
+        $this->faker = Factory::create($locale);
     }
 
     /**
@@ -162,7 +163,7 @@ class RandomFiller
     private function setFaker($locale)
     {
         if ($locale !== null) {
-            $this->faker = \Faker\Factory::create($locale);
+            $this->faker = Factory::create($locale);
             $this->locale = $locale;
         }
     }
