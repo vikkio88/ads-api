@@ -2,20 +2,21 @@
 
 
 use App\Lib\Slime\Interfaces\DatabaseHelpers\DbHelperInterface;
-use Illuminate\Database\Capsule\Manager as Capsule; 
+use Illuminate\Database\Capsule\Manager as Capsule;
 use \Illuminate\Database\Schema\Blueprint as Blueprint;
 
-class M1486843362Leagues implements DbHelperInterface {
+class M1486843362Leagues implements DbHelperInterface
+{
 
-        public function run()
-        {
-        $tableName = 'table_name';
-        Capsule::schema()->dropIfExists($tableName);
-        Capsule::schema()->create($tableName, function (Blueprint $table) {
+    public function run()
+    {
+        Capsule::schema()->dropIfExists('leagues');
+        Capsule::schema()->create('leagues', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->unsignedTinyInteger('teams')->default(2);
             $table->timestamps();
         });
-        }
-        
+    }
+
 }
