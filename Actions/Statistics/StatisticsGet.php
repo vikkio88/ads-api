@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Actions\User;
+namespace App\Actions\Statistics;
 
 use App\Lib\Slime\RestAction\ApiAction;
 use App\Models\Player;
