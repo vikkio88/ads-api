@@ -1,7 +1,7 @@
 <?php
 
+use App\Lib\AdsLib\RandomFiller;
 use App\Lib\Slime\Interfaces\DatabaseHelpers\DbHelperInterface;
-use App\Libs\AdsLib\RandomFiller;
 use App\Models\Coach;
 use App\Models\Player;
 use App\Models\Team;

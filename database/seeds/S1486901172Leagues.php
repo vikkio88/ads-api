@@ -1,7 +1,7 @@
 <?php
 
 use App\Lib\Slime\Interfaces\DatabaseHelpers\DbHelperInterface;
-use App\Libs\AdsLib\LeagueFixtureGenerator;
+use App\Lib\AdsLib\LeagueFixtureGenerator;
 use App\Models\League;
 use App\Models\LeagueRound;
 use App\Models\Match;
