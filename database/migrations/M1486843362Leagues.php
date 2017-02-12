@@ -14,7 +14,7 @@ class M1486843362Leagues implements DbHelperInterface
         Capsule::schema()->create('leagues', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->unsignedTinyInteger('teams')->default(2);
+            $table->tinyInteger('teams')->unsigned()->default(2);
             $table->timestamps();
         });
     }

@@ -16,8 +16,8 @@ class M1486843397MatchPlayers implements DbHelperInterface
             $table->integer('match_id');
             $table->integer('team_id');
             $table->integer('player_id')->default(0);
-            $table->unsignedTinyInteger('goals')->default(0);
-            $table->unsignedTinyInteger('vote')->default(6);
+            $table->tinyInteger('goals')->unsigned()->default(0);
+            $table->tinyInteger('vote')->unsigned()->default(6);
             $table->timestamps();
         });
     }

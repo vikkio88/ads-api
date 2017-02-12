@@ -15,11 +15,11 @@ class M1486843381LeagueTeams implements DbHelperInterface
             $table->increments('id');
             $table->integer('league_id');
             $table->integer('team_id');
-            $table->unsignedTinyInteger('points')->default(0);
-            $table->unsignedTinyInteger('played')->default(0);
-            $table->unsignedTinyInteger('won')->default(0);
-            $table->unsignedTinyInteger('draw')->default(0);
-            $table->unsignedTinyInteger('lost')->default(0);
+            $table->tinyInteger('points')->unsigned()->default(0);
+            $table->tinyInteger('played')->unsigned()->default(0);
+            $table->tinyInteger('won')->unsigned()->default(0);
+            $table->tinyInteger('draw')->unsigned()->default(0);
+            $table->tinyInteger('lost')->unsigned()->default(0);
             $table->timestamps();
         });
     }
