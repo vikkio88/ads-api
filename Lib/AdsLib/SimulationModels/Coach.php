@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Lib\DsManager\Models;
-
-namespace App\Libs\AdsLib\SimulationModels;
+namespace App\Lib\AdsLib\SimulationModels;
 
 
 use App\Lib\AdsLib\SimulationModels\Common\Person;

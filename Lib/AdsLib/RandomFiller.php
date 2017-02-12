@@ -4,9 +4,9 @@
 namespace App\Lib\AdsLib;
 
 use App\Lib\Helpers\Config;
-use App\Libs\AdsLib\SimulationModels\Coach;
-use App\Libs\AdsLib\SimulationModels\Player;
-use App\Libs\AdsLib\SimulationModels\Team;
+use App\Lib\AdsLib\SimulationModels\Coach;
+use App\Lib\AdsLib\SimulationModels\Player;
+use App\Lib\AdsLib\SimulationModels\Team;
 use Faker\Factory;
 
 /**
