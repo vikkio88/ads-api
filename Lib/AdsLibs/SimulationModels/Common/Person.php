@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\Libs\AdsLib\SimulationModels\Common;
+namespace App\Lib\AdsLib\SimulationModels\Common;
 
 
-use App\Libs\AdsLib\Randomizer;
+use App\Lib\AdsLib\Randomizer;
 
 abstract class Person extends DsManagerModel
 {

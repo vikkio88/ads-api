@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\AdsLib\SimulationModels;
+namespace App\Lib\AdsLib\SimulationModels;
 
 use App\Lib\Helpers\Config;
 

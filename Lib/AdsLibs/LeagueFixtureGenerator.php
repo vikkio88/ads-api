@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Libs\AdsLib;
+namespace App\Lib\AdsLib;
 
 class LeagueFixtureGenerator
 {

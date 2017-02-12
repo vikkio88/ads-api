@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs\AdsLib\SimulationModels;
+namespace App\Lib\AdsLib\SimulationModels;
 
 
 class League

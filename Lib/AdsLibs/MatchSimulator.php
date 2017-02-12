@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Libs\AdsLib;
+namespace App\Lib\AdsLib;
 
 
 use App\Libs\AdsLib\SimulationModels\Match as MatchSim;

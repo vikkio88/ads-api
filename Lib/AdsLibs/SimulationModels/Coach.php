@@ -5,7 +5,7 @@ namespace App\Lib\DsManager\Models;
 namespace App\Libs\AdsLib\SimulationModels;
 
 
-use App\Libs\AdsLib\SimulationModels\Common\Person;
+use App\Lib\AdsLib\SimulationModels\Common\Person;
 
 class Coach extends Person
 {

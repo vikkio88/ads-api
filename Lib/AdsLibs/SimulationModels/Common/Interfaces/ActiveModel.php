@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Libs\AdsLib\SimulationModels\Common\Interfaces;
+namespace App\Lib\AdsLib\SimulationModels\Common\Interfaces;
 
 
 interface ActiveModel

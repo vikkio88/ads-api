@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Libs\AdsLib\SimulationModels;
+namespace App\Lib\AdsLib\SimulationModels;
 
 use App\Lib\Helpers\Config;
-use App\Libs\AdsLib\SimulationModels\Common\DsManagerModel;
+use App\Lib\AdsLib\SimulationModels\Common\DsManagerModel;
 
 
 class MatchResult extends DsManagerModel

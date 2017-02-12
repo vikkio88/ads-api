@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Libs\AdsLib;
+namespace App\Lib\AdsLib;
 
 use App\Lib\Helpers\Config;
 use App\Libs\AdsLib\SimulationModels\Coach;

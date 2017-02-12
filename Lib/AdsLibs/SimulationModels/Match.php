@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Libs\AdsLib\SimulationModels;
+namespace App\Lib\AdsLib\SimulationModels;
 
-use App\Libs\AdsLib\SimulationModels\Common\DsManagerModel;
+use App\Lib\AdsLib\SimulationModels\Common\DsManagerModel;
 
 class Match extends DsManagerModel
 {

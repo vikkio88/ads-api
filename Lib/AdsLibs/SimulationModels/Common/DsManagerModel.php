@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Libs\AdsLib\SimulationModels\Common;
+namespace App\Lib\AdsLib\SimulationModels\Common;
 
-use App\Libs\AdsLib\SimulationModels\Common\Interfaces\ActiveModel;
+use App\Lib\AdsLib\SimulationModels\Common\Interfaces\ActiveModel;
 
 
 abstract class DsManagerModel implements ActiveModel
