@@ -1,7 +1,8 @@
 <?php
 
-use App\Actions\User\CoachesGetAll;
-use App\Actions\User\CoachesGetOne;
+
+use App\Actions\Coaches\CoachesGetAll;
+use App\Actions\Coaches\CoachesGetOne;
 
 $api->get('/coaches', function ($request, $response, $args) {
     return (new CoachesGetAll($request, $response, $args))->execute();
