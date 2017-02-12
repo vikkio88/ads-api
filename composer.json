@@ -19,7 +19,8 @@
         "psr-4": {
             "App\\Models\\": "Models/",
             "App\\Actions\\": "Actions/",
-            "App\\Console\\": "Console/"
+            "App\\Console\\": "Console/",
+            "App\\Lib\\AdsLib\\": "Lib/AdsLib"
         }
     },
     "autoload-dev": {

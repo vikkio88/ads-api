@@ -41,7 +41,7 @@ class Team extends DsManagerModel
             $c++;
         }
 
-        return bcdiv($tot, $c, 2);
+        return round($tot / $c, 2);
     }
 
     /**
@@ -56,7 +56,7 @@ class Team extends DsManagerModel
             $c++;
         }
 
-        return bcdiv($tot, $c, 2);
+        return round($tot / $c, 2);
     }
 
     /**

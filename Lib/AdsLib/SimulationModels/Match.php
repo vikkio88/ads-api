@@ -2,6 +2,7 @@
 
 namespace App\Lib\AdsLib\SimulationModels;
 
+use App\Lib\AdsLib\Randomizer;
 use App\Lib\AdsLib\SimulationModels\Common\DsManagerModel;
 
 class Match extends DsManagerModel
