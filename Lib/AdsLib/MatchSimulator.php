@@ -4,7 +4,7 @@
 namespace App\Lib\AdsLib;
 
 
-use App\Libs\AdsLib\SimulationModels\Match as MatchSim;
+use App\Lib\AdsLib\SimulationModels\Match as MatchSim;
 use App\Models\LeagueRound;
 use App\Models\Match;
 use App\Models\MatchResult;
