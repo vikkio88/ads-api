@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
-use App\Lib\Slime\Models\SlimeModel;
+use App\Lib\AdsLib\Randomizer;
 
-class MatchResult extends SlimeModel
+class MatchResult extends Match
 {
 
+    protected $table = 'matches';
     protected $fillable = [
         'goal_home',
         'goal_away',
