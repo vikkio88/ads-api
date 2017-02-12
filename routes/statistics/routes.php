@@ -1,11 +1,7 @@
 <?php
 
+use App\Actions\User\StatisticsGet;
+
 $api->get('/statistics', function ($request, $response, $args) {
-            return (
-                new SOMEACTION(
-                    $request,
-                    $response,
-                    $args
-                )
-             )->execute();
-             });
+    return (new StatisticsGet($request, $response, $args))->execute();
+});
