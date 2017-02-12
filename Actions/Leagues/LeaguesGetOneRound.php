@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\Actions\Coaches;
+namespace App\Actions\Leagues;
 
 use App\Lib\Slime\RestAction\ApiAction;
 use App\Models\LeagueRound;
