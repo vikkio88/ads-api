@@ -13,6 +13,6 @@ class TeamsGetOne extends ApiAction
     {
         $this->payload = Team::complete()
             ->where('id', $this->args['id'])
-            ->get();
+            ->first();
     }
 }
