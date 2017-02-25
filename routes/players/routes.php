@@ -1,11 +1,7 @@
 <?php
 
-$api->get('/players', function ($request, $response, $args) {
-            return (
-                new SOMEACTION(
-                    $request,
-                    $response,
-                    $args
-                )
-             )->execute();
-             });
+use App\Actions\Players\PlayerGetOne;
+
+$api->get('/players/{id}', function ($request, $response, $args) {
+    return (new PlayerGetOne($request, $response, $args))->execute();
+});

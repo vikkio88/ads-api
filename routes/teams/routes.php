@@ -3,7 +3,6 @@
 use App\Actions\Teams\TeamsGetAll;
 use App\Actions\Teams\TeamsGetOne;
 use App\Actions\Teams\TeamsGetOneCoach;
-use App\Actions\Teams\TeamsGetOnePlayer;
 use App\Actions\Teams\TeamsGetOneWithMatches;
 use App\Actions\Teams\TeamsGetOneWithRoster;
 
@@ -27,6 +26,3 @@ $api->get('/teams/{id}/coach', function ($request, $response, $args) {
     return (new TeamsGetOneCoach($request, $response, $args))->execute();
 });
 
-$api->get('/teams/{id}/players/{playerId}', function ($request, $response, $args) {
-    return (new TeamsGetOnePlayer($request, $response, $args))->execute();
-});
