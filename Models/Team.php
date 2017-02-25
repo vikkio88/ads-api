@@ -65,11 +65,9 @@ class Team extends SlimeModel
             ->limit(self::FUTURE_LIMIT);
     }
 
-    public function scopeComplete($query)
+    public function scopeAllMatches($query)
     {
         return $query->with(
-            'roster',
-            'coach',
             'playedMatchesHome',
             'playedMatchesHome.awayTeam',
             'futureMatchesHome',
@@ -79,6 +77,15 @@ class Team extends SlimeModel
             'futureMatchesAway',
             'futureMatchesAway.homeTeam'
         );
+    }
+
+    public function scopeComplete($query)
+    {
+        return $query->allMatches()
+            ->with(
+                'roster',
+                'coach'
+            );
     }
 
     public static function getBest()
