@@ -9,6 +9,7 @@ class Match extends SlimeModel
     protected $fillable = [
         'home_team_id',
         'away_team_id',
+        'date',
         'league_round_id'
     ];
 

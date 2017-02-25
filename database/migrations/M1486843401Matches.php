@@ -22,7 +22,7 @@ class M1486843401Matches implements DbHelperInterface
             $table->integer('winner_id')->default(null);
             $table->integer('loser_id')->default(null);
             $table->boolean('simulated')->default(false);
-            $table->date('match_date')->default(\Carbon\Carbon::now());
+            $table->date('date');
             $table->timestamps();
         });
     }
