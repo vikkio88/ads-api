@@ -13,6 +13,6 @@ class TeamsGetOneWithRoster extends ApiAction
     {
         $this->payload = Team::with('roster')
             ->where('id', $this->args['id'])
-            ->get();
+            ->first();
     }
 }
