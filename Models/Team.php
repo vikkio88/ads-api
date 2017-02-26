@@ -31,7 +31,7 @@ class Team extends SlimeModel
             MatchResult::class,
             'home_team_id'
         )->where('simulated', true)
-            ->orderBy('updated_at', 'DESC')
+            ->orderBy('date', 'ASC')
             ->limit(self::PLAYED_LIMIT);
     }
 
@@ -41,7 +41,7 @@ class Team extends SlimeModel
             MatchResult::class,
             'home_team_id'
         )->where('simulated', false)
-            ->orderBy('updated_at', 'DESC')
+            ->orderBy('date', 'ASC')
             ->limit(self::FUTURE_LIMIT);
     }
 
@@ -51,7 +51,7 @@ class Team extends SlimeModel
             MatchResult::class,
             'away_team_id'
         )->where('simulated', true)
-            ->orderBy('updated_at', 'DESC')
+            ->orderBy('date', 'ASC')
             ->limit(self::PLAYED_LIMIT);
     }
 
@@ -61,7 +61,7 @@ class Team extends SlimeModel
             MatchResult::class,
             'away_team_id'
         )->where('simulated', false)
-            ->orderBy('updated_at', 'DESC')
+            ->orderBy('date', 'ASC')
             ->limit(self::FUTURE_LIMIT);
     }
 
