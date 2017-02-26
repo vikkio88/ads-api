@@ -69,13 +69,16 @@ class Team extends SlimeModel
     {
         return $query->with(
             'playedMatchesHome',
+            'playedMatchesHome.round',
             'playedMatchesHome.awayTeam',
             'futureMatchesHome',
             'futureMatchesHome.round',
             'futureMatchesHome.awayTeam',
             'playedMatchesAway',
+            'playedMatchesAway.round',
             'playedMatchesAway.homeTeam',
             'futureMatchesAway',
+            'futureMatchesAway.round',
             'futureMatchesAway.homeTeam'
         );
     }
