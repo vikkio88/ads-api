@@ -14,8 +14,8 @@ class S1486901172Leagues implements DbHelperInterface
     public function run()
     {
         $leagues = [
-            'friendly' => 16,
-            'europa league' => 8
+            'Friendly' => 16,
+            'Europa League' => 8
         ];
         $teams = Team::all()->toArray();
         foreach ($leagues as $league => $teamsNum) {
