@@ -27,6 +27,11 @@ class Match extends SlimeModel
         'simulated' => 'boolean'
     ];
 
+    public function round()
+    {
+        return $this->belongsTo(LeagueRound::class, 'league_round_id');
+    }
+
     public function homeTeam()
     {
         return $this->belongsTo(Team::class, 'home_team_id');

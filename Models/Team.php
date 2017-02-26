@@ -71,6 +71,7 @@ class Team extends SlimeModel
             'playedMatchesHome',
             'playedMatchesHome.awayTeam',
             'futureMatchesHome',
+            'futureMatchesHome.round',
             'futureMatchesHome.awayTeam',
             'playedMatchesAway',
             'playedMatchesAway.homeTeam',
