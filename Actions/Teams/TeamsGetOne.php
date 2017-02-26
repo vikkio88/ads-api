@@ -11,7 +11,7 @@ class TeamsGetOne extends ApiAction
 
     protected function performAction()
     {
-        $this->payload = Team::complete()
+        $this->payload = Team::with('coach')
             ->where('id', $this->args['id'])
             ->first();
     }
