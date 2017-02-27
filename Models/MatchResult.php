@@ -133,6 +133,10 @@ class MatchResult extends Match
 
     public function scopeComplete($query)
     {
-        return parent::scopeComplete($query)->with('scorers');
+        return $query->with(
+            'homeTeam',
+            'awayTeam',
+            'scorers'
+        );
     }
 }
