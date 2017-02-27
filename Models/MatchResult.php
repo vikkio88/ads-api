@@ -134,6 +134,8 @@ class MatchResult extends Match
     public function scopeComplete($query)
     {
         return $query->with(
+            'round',
+            'round.league',
             'homeTeam',
             'awayTeam',
             'scorers'
