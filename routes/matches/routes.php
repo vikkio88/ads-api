@@ -15,10 +15,6 @@ $api->post('/matches', function ($request, $response, $args) {
 });
 
 $api->get('/matches/{id}', function ($request, $response, $args) {
-    return (new MatchesGetOne($request, $response, $args))->execute();
-});
-
-$api->get('/matches/{id}/result', function ($request, $response, $args) {
     return (new MatchesResultGetOne($request, $response, $args))->execute();
 });
 
