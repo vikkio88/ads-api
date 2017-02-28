@@ -20,6 +20,11 @@ class Player extends SlimeModel
         'team_id'
     ];
 
+    protected $hidden = [
+        'created_at',
+        'updated_at'
+    ];
+
     public function team()
     {
         return $this->belongsTo(Team::class);

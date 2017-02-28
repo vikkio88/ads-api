@@ -6,7 +6,6 @@ use App\Lib\AdsLib\Randomizer;
 
 class MatchResult extends Match
 {
-
     protected $table = 'matches';
     protected $fillable = [
         'goal_home',
