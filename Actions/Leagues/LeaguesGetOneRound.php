@@ -12,6 +12,8 @@ class LeaguesGetOneRound extends ApiAction
     protected function performAction()
     {
         $this->payload = LeagueRound::complete()
-            ->find($this->args['id']);
+            ->where('league_id', $this->args['id'])
+            ->where('id', $this->args['roundId'])
+            ->first();
     }
 }
