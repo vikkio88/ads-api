@@ -18,7 +18,7 @@ class SimulateDay implements Job
     {
         $this->now = Carbon::now();
 
-        if ($this->now->hour >= 4 && $this->now->hour > 22) {
+        if ($this->now->hour >= 4 && $this->now->hour < 23) {
             return false;
         }
         $this->simulateMatches();
