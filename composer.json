@@ -8,10 +8,11 @@
     "require": {
         "vikkio88/slime-framework": "dev-master",
         "akrabat/rka-ip-address-middleware": "^0.4.0",
-        "palanik/corsslim": "dev-slim3"
+        "palanik/corsslim": "dev-slim3",
+        "fzaninotto/faker": "~1.4",
+        "vikkio88/mashtru": "^1.0"
     },
     "require-dev": {
-        "fzaninotto/faker": "~1.4",
         "phpunit/phpunit": "~4.0"
     },
     "autoload": {
@@ -20,7 +21,8 @@
             "App\\Models\\": "Models/",
             "App\\Actions\\": "Actions/",
             "App\\Console\\": "Console/",
-            "App\\Lib\\AdsLib\\": "Lib/AdsLib"
+            "App\\Lib\\AdsLib\\": "Lib/AdsLib",
+            "App\\Scripts\\": "scripts/Scripts"
         }
     },
     "autoload-dev": {
