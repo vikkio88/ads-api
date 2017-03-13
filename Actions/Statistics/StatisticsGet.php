@@ -14,7 +14,7 @@ class StatisticsGet extends ApiAction
     {
         $this->payload = [
             'scorers' => Player::getBestScorers(),
-            'performance' => Player::getBestAvg(),
+            'avg' => Player::getBestAvg(),
             'teams' => Team::getBest()
         ];
     }
