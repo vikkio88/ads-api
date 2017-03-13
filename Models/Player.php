@@ -74,7 +74,7 @@ class Player extends SlimeModel
         $stats = MatchPlayer::selectRaw(
             'player_id, AVG(vote) as avg, COUNT(*) as appearances'
         )->where('goals', '>', 0)
-            ->orderByRaw('AVG(vote) DESC')
+            ->orderByRaw('COUNT(*) DESC, AVG(vote) DESC')
             ->groupBy('player_id')->take(self::PLAYER_STATS_LIMIT)->get()->keyBy('player_id')->toArray();
         return self::mergeStats($stats);
     }
