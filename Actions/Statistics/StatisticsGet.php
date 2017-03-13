@@ -13,7 +13,8 @@ class StatisticsGet extends ApiAction
     protected function performAction()
     {
         $this->payload = [
-            'players' => Player::getBest(),
+            'scorers' => Player::getBestScorers(),
+            'performance' => Player::getBestAvg(),
             'teams' => Team::getBest()
         ];
     }

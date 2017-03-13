@@ -94,16 +94,28 @@ class Team extends SlimeModel
 
     public static function getBest()
     {
-        $result = Match::selectRaw('winner_id, COUNT(*) as won')
+        $stats = Match::selectRaw('winner_id, COUNT(*) as won')
             ->whereNotNull('winner_id')->where('winner_id', '!=', 0)
             ->orderByRaw('COUNT(*) DESC')->groupBy('winner_id')
             ->take(self::TEAM_STATS_LIMIT)->get()->keyBy('winner_id')->toArray();
-        $teams = Team::whereIn('id', array_keys($result))->get()->toArray();
-        $result = array_map(function ($team) use ($result) {
-            return array_merge($team, $result[$team['id']]);
+        return self::mergeStats($stats);
+    }
 
-        }, $teams);
+    private static function mergeStats($stats)
+    {
+        $result = [];
+        $teams = Team::whereIn('id', array_keys($stats))
+            ->get()
+            ->keyBy('id')
+            ->toArray();
 
+        foreach ($stats as $teamId => $stat){
+            unset($stat['team_id']);
+            $result[] = array_merge(
+                $teams[$teamId],
+                $stat
+            );
+        }
         return $result;
     }
 

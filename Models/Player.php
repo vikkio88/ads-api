@@ -69,17 +69,42 @@ class Player extends SlimeModel
         );
     }
 
-    public static function getBest()
+    public static function getBestAvg()
     {
-        $result = MatchPlayer::selectRaw(
-            'player_id, COUNT(*) as appearances , AVG(vote) avg, SUM(goals) goals'
+        $stats = MatchPlayer::selectRaw(
+            'player_id, AVG(vote) as avg, COUNT(*) as appearances'
         )->where('goals', '>', 0)
-            ->orderByRaw('SUM(goals) DESC,COUNT(*) DESC')
+            ->orderByRaw('AVG(vote) DESC')
             ->groupBy('player_id')->take(self::PLAYER_STATS_LIMIT)->get()->keyBy('player_id')->toArray();
-        $players = Player::with('team')->whereIn('id', array_keys($result))->get()->toArray();
-        $result = array_map(function ($player) use ($result) {
-            return array_merge($player, $result[$player['id']]);
-        }, $players);
+        return self::mergeStats($stats);
+    }
+
+    public static function getBestScorers()
+    {
+        $stats = MatchPlayer::selectRaw(
+            'player_id, SUM(goals) goals, COUNT(*) as appearances'
+        )->where('goals', '>', 0)
+            ->orderByRaw('SUM(goals) DESC')
+            ->groupBy('player_id')->take(self::PLAYER_STATS_LIMIT)->get()->keyBy('player_id')->toArray();
+        return self::mergeStats($stats);
+    }
+
+    private static function mergeStats($stats)
+    {
+        $result = [];
+        $players = Player::with('team')
+            ->whereIn('id', array_keys($stats))
+            ->get()
+            ->keyBy('id')
+            ->toArray();
+
+        foreach ($stats as $playerId => $stat){
+            unset($stat['player_id']);
+            $result[] = array_merge(
+                $players[$playerId],
+                $stat
+            );
+        }
         return $result;
     }
 }
