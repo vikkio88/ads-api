@@ -6,23 +6,13 @@ use App\Actions\Teams\TeamsGetOneCoach;
 use App\Actions\Teams\TeamsGetOneWithMatches;
 use App\Actions\Teams\TeamsGetOneWithRoster;
 
-$api->get('/teams', function ($request, $response, $args) {
-    return (new TeamsGetAll($request, $response, $args))->execute();
-});
+$api->get('/teams', TeamsGetAll::class);
 
-$api->get('/teams/{id}', function ($request, $response, $args) {
-    return (new TeamsGetOne($request, $response, $args))->execute();
-});
+$api->get('/teams/{id}', TeamsGetOne::class);
 
-$api->get('/teams/{id}/matches', function ($request, $response, $args) {
-    return (new TeamsGetOneWithMatches($request, $response, $args))->execute();
-});
+$api->get('/teams/{id}/matches', TeamsGetOneWithMatches::class);
 
-$api->get('/teams/{id}/roster', function ($request, $response, $args) {
-    return (new TeamsGetOneWithRoster($request, $response, $args))->execute();
-});
+$api->get('/teams/{id}/roster', TeamsGetOneWithRoster::class);
 
-$api->get('/teams/{id}/coach', function ($request, $response, $args) {
-    return (new TeamsGetOneCoach($request, $response, $args))->execute();
-});
+$api->get('/teams/{id}/coach', TeamsGetOneCoach::class);
 
